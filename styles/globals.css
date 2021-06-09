@@ -24,3 +24,9 @@ main {
 body {
   background-color: lightgrey;
 }
+.cart {
+  background-color: white;
+  height: 90%;
+  width: 400px;
+  border-radius: 5px;
+}

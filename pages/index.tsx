@@ -1,7 +1,11 @@
+import { Cart } from '../Components/Cart';
+
 export default function Home() {
   return (
     <div className='wrapper'>
-      <main>Hello</main>
+      <main>
+        <Cart />
+      </main>
     </div>
   );
 }
