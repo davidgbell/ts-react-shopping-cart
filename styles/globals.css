@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body {
+  background-color: lightgrey;
+}
