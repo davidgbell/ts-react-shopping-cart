@@ -30,3 +30,39 @@ body {
   width: 400px;
   border-radius: 5px;
 }
+.product {
+  background-color: lightgrey;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+}
+.product_content {
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'quantity price';
+  gap: 10px;
+}
+.qty-btns {
+  display: flex;
+  align-items: center;
+  grid-area: quantity;
+}
+.qty-btns span {
+  padding: 0 0.5em;
+}
+.product_title {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+}
+.product_price {
+  grid-area: price;
+}
