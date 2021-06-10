@@ -5,10 +5,16 @@ type ProductProps = {
   image: string;
   price: number;
   colour: string;
+  quantity: number;
 };
 
-export const Product = ({ name, image, price, colour }: ProductProps) => {
-  const [quantity, setQuantity] = useState(1);
+export const Product = ({
+  name,
+  image,
+  price,
+  colour,
+  quantity,
+}: ProductProps) => {
   return (
     <div className='product'>
       <div className='product-grid'>
