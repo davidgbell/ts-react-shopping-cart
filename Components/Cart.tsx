@@ -7,6 +7,7 @@ const productData = data;
 export const Cart = () => {
   const [products, setProducts] = useState<any[] | null>(null);
   const [quantity, setQuantity] = useState(1);
+  const [deliveryCost, setDeliveryCost] = useState(10);
 
   useEffect(() => {
     setProducts(productData);
@@ -15,6 +16,14 @@ export const Cart = () => {
   if (!products) {
     return <h1>Loading</h1>;
   }
+
+  const orderTotal = products.reduce((acc, product) => acc + product.price, 0);
+
+  const calcTotal =
+    products.reduce((acc, product) => acc + product.price, 0) + deliveryCost;
+
+  console.log(calcTotal);
+  console.log(orderTotal);
 
   return (
     <div className='cart'>
@@ -30,12 +39,12 @@ export const Cart = () => {
       ))}
       <div className='prices_wrapper'>
         <span className='prices_label'>Order</span>
-        <span className='prices_price'>£ 100</span>
+        <span className='prices_price'>£ {orderTotal}</span>
         <span className='prices_label'>Delivery</span>
-        <span className='prices_price'>£ 10.00</span>
+        <span className='prices_price'>£ {deliveryCost}</span>
         <div className='total'>
           <span>Total</span>
-          <span>Price</span>
+          <span>£ {calcTotal}</span>
         </div>
       </div>
     </div>
